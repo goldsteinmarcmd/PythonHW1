@@ -1,0 +1,52 @@
+
+# coding: utf-8
+
+# In[80]:
+
+
+import pandas as pd
+import os
+
+
+# In[81]:
+
+
+csv_path = os.path.join('election_data_2.csv')
+
+
+# In[82]:
+
+
+electiond_df = pd.read_csv(csv_path,low_memory=False)
+electiond_df.head(5)
+
+
+# In[88]:
+
+
+#votes per candidate
+candidate_counts = electiond_df["Candidate"].value_counts()
+candidate_counts.head()
+
+
+# In[86]:
+
+
+grouped_candidate_df = electiond_df.groupby ("Candidate")
+print(type(grouped_candidate))
+grouped_candidate_df.count().head(10)
+
+
+# In[89]:
+
+
+electiond_df=electiond_df.iloc[:, [0, 1, 2]]
+electiond_df.head(5)
+
+
+# In[103]:
+
+
+candidate_counts.values.max()
+#df.values.max()
+
