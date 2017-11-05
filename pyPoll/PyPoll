@@ -1,0 +1,38 @@
+import csv
+with open('election_data_2.csv', newline='') as csvfile:
+
+        #CSV reader specifies delimiter and variable that holds contents
+    csvreader = csv.reader(csvfile,delimiter=',')
+    print("----------------!!")
+    print(csvreader)
+    print("----------------")
+    print("Financial Analysis")
+    print("---------------")
+    #Print number of months aka rows
+    data = list(csvreader)
+    row_count = str(len(data)-1)
+    print("Total Votes: " + row_count)
+    #print("------------------")
+    #candidate1 = "Correy"
+    #candidate2 = "Khan"
+    #candidate3 = "Li"
+    #candidate4 = "O'Tooley"
+    #candidate1_count = str(candidate1))
+    #print(candidate1_count)
+
+  #  for t in cn.iteritems():
+   #     print("{} appears {} times".format(*t))
+    candidate = []
+    candidate = str(candidate)
+    for row in csvreader:
+        candidate.append(str(row[2]))
+        print(candidate)
+
+#The average change in revenue between months over the entire period
+#The greatest increase in revenue (date and amount) over the entire period
+#The greatest decrease in revenue (date and amount) over the entire period
+
+#Correy
+#Khan
+#Li
+#O'Tooley
